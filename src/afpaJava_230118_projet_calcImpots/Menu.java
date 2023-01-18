@@ -11,7 +11,8 @@ public class Menu {
 			"4: Modifier propriétaire d'une maison",
 			"5: Afficher toutes les habitations créées",
 			"6: Afficher les habitations d'une commune",
-			"7: Quitter"
+			"7: Liste des communes",
+			"8: Quitter"
 	};
 	
 	
@@ -147,8 +148,18 @@ public class Menu {
 		afficherMenu("");
 	}
 
-	
 	static void menu7() {
+		cls();
+		Commune.afficherListeDesCommunes();
+		System.out.println("(Retour : Enter)");
+		Scanner s = new Scanner(System.in);
+		s.nextLine();
+		afficherMenu("");
+		
+	}
+	
+	
+	static void menu8() {
 		cls();
 		System.out.println("Au revoir.");
 		System.exit(0);
